@@ -1,0 +1,21 @@
+<ion-view view-title="Log In">
+  <ion-content>
+    <form ng-submit="login(this.Email, this.Pass)">
+      <label class="item item-input">
+        <input type="email" placeholder="Email" ng-model="Email" id="Email">
+      </label>
+      <label class="item item-input">
+        <input type="password" placeholder="Contraseña" ng-model="Pass" id="Pass">
+      </label>
+      <label class="item item-input" id="mensaje">
+      </label>
+      <button class="button button-full button-positive">
+        Entrar
+      </button>
+     
+      <fb:login-button data-auto-logout-link="true" scope="public_profile,email" size="large"></fb:login-button>
+     
+    </form>
+
+  </ion-content>
+</ion-view>
