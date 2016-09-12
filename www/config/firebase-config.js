@@ -1,8 +1,8 @@
  // Initialize Firebase
-var config = {
-	apiKey: "AIzaSyD6nRLBIl43m8cLzzxGBwZSow--NLkZPa0",
-	authDomain: "gustoboliviano.firebaseapp.com",
-	databaseURL: "https://gustoboliviano.firebaseio.com",
-	storageBucket: "gustoboliviano.appspot.com",
-};
-firebase.initializeApp(config);
+ var config = {
+   apiKey: "AIzaSyCvn50VYWZbEUM9pNMhBAZ-R79-RCe9g3I",
+   authDomain: "gustoboliviano-d8941.firebaseapp.com",
+   databaseURL: "https://gustoboliviano-d8941.firebaseio.com",
+   storageBucket: "gustoboliviano-d8941.appspot.com",
+ };
+ firebase.initializeApp(config);
