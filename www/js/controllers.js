@@ -1,7 +1,8 @@
 angular.module('starter.controllers', [])
-
-
   .controller('mainCtrl', function($scope, $stateParams, $http, $log, $state) {
+
+  })
+  .controller('registroCTrl', function($scope, $stateParams, $http, $log, $state) {
 
   })
   .controller('LoginCtrl', function($scope, $stateParams, $http, $log, $state) {
