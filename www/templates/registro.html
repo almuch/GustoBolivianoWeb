@@ -18,56 +18,56 @@
           <div class="list">
             <label class="item item-input">
               <span class="input-label">Nombre</span>
-              <input type="text">
+              <input type="text" ng-model="data.name"/>
             </label>
 
             <label class="item item-input">
               <span class="input-label">Descripción</span>
-              <textarea></textarea>
+              <textarea ng-model="data.description"></textarea>
             </label>
 
             <label class="item item-input">
               <span class="input-label">Imagen del establecimiento</span>
-              <input type="file">
+              <input type="file" ng-model="data.image-url"/>
             </label>
 
             <label class="item item-input item-select">
               <div class="input-label">
                 Tipo de establecimiento
               </div>
-              <select>
-                <option>Café</option>
-                <option>Restaurante</option>
-                <option>Pub</option>
+              <select ng-model="data.type">
+                <option value="cafe">Café</option>
+                <option value="restaurante">Restaurante</option>
+                <option value="pub">Pub</option>
               </select>
             </label>
 
             <label class="item item-input">
               <span class="input-label">Horario de atención - apertura</span>
-              <input type="time">
+              <input type="time" ng-model="data.open-time" />
             </label>
 
             <label class="item item-input">
               <span class="input-label">Horario de atención - cierre</span>
-              <input type="time">
+              <input type="time" ng-model="data.close-time"/>
             </label>
 
             <label class="item item-input">
-              <span class="input-label">Dirección principal</span>
-              <input type="text">
+              <span class="input-label">Dirección</span>
+              <input type="text" ng-model="data.direction"/>
             </label>
 
             <label class="item item-input">
               <span class="input-label">N.I.T. (PDF - Opcional)</span>
-              <input type="file">
+              <input type="file" ng-model="data.nit"/>
             </label>
 
             <label class="item item-input">
               <span class="input-label">Licencia de funcionamiento (PDF - Opcional)</span>
-              <input type="file">
+              <input type="file" ng-model="data.licence"/>
             </label>
 
-            <button class="button button-full button-balanced">
+            <button class="button button-full button-balanced" ng-click='registerEstablishment(data);'>
               Registrar
             </button>
             <br><br>

@@ -3,7 +3,10 @@ angular.module('starter.controllers', [])
 
   })
   .controller('registroCTrl', function($scope, $stateParams, $http, $log, $state) {
+    $scope.registerEstablishment = function (data) {
+      if(data.name.length > 0)
 
+    }
   })
   .controller('LoginCtrl', function($scope, $stateParams, $http, $log, $state) {
     var user = firebase.auth().currentUser;
