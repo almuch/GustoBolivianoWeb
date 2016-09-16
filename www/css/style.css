@@ -5,3 +5,12 @@
 .light-primary-color{
   background-color: #ffdca6;
 }
+
+
+
+.color-fail{
+  color: red;
+}
+.color-success{
+  color: green;
+}

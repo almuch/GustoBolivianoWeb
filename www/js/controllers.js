@@ -3,9 +3,33 @@ angular.module('starter.controllers', [])
 
   })
   .controller('registroCTrl', function($scope, $stateParams, $http, $log, $state) {
-    $scope.registerEstablishment = function (data) {
-      if(data.name.length > 0)
+    $scope.options = [
+      {value : "ticket one"},
+      {value : "ticket two"},
+      {value : "ticket three"}
+    ];
 
+    $scope.registerEstablishment = function (data) {
+      alert(data.type.value);
+      firebase.database().ref('restaurants/' + data.name).set({
+        email: data.email,
+        description : data.description,
+        type: data.type.value,
+        opentime: data.opentime,
+        closetime: data.closetime,
+        direction: data.direction
+      });
+      /* PRUEBA PARA AGREGAR LOS TIPOS DE ESTABLECIMIENTO
+      firebase.database().ref('tipos/restaurant').set({
+        description : "Este tipo de establecimientos ofrece comidas y bebidas no alcoholicas."
+      });
+      firebase.database().ref('tipos/cafe').set({
+        description : "Este tipo de establecimientos ofrece bebidas calientes no alcoholicas y/o confiteria en general."
+      });
+      firebase.database().ref('tipos/bar').set({
+        description : "Este tipo de establecimientos ofrece bebidas alcoholicas y no alcoholicas."
+      });
+      */
     }
   })
   .controller('LoginCtrl', function($scope, $stateParams, $http, $log, $state) {
